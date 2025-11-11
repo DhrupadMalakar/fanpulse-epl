@@ -17,12 +17,11 @@ An autonomous AI agent that reads 72 hours of Reddit discussion for all 20 Premi
 
 ---
 
+
 ## Architecture
-```mermaid
-flowchart LR
-  A[Reddit Subreddits] --> B[Ingestion (PRAW)]
-  B --> C[Cleaning & Emotion-Biased Classifier]
-  C --> D[OpenAI: players-only filter + reasons + outlook]
-  D --> E[Results Table (CSV)]
-  D --> F[Report & Chart (README/PNG)]
+
+**Data Flow Overview**
+
+Reddit → Ingestion (PRAW) → Cleaning & Sentiment Classification → OpenAI (GPT reasoning for players + reasons + outlook) → Results Table (CSV) + Chart (PNG)
+
 
